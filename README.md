@@ -1,2 +1,2 @@
 # Rust-exercises
-I am learning rust and in this repo I will be keeping track of exercises and small projects that I do.
+I am learning rust and in this repo I will be keeping track of exercises and small projects that I do. The purpose of this repository is to hold myself accountable and create some artifact from my learning process. Surely this repository will at times contain incomplete code, broken code, inelegant code, things that aren't code, code that I like, code that I don't like, etc.
