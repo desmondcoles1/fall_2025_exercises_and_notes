@@ -1,0 +1,1 @@
+/Users/dc45624/Documents/GitHub/fall_2025_exercises_and_notes/rust_exercises/hello_world/target/debug/hello_world: /Users/dc45624/Documents/GitHub/fall_2025_exercises_and_notes/rust_exercises/hello_world/src/main.rs

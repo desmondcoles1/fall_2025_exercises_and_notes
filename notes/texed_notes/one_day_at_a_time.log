@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  26 AUG 2025 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  26 AUG 2025 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,7 +662,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count322
 \l__pdf_internal_box=\box69
 )
-No file one_day_at_a_time.aux.
+(./one_day_at_a_time.aux)
 \openout1 = `one_day_at_a_time.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
@@ -685,6 +685,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
 LaTeX Font Info:    ... okay on input line 134.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 134
 .
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -723,12 +724,10 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 134.
+
+(./one_day_at_a_time.out) (./one_day_at_a_time.out)
 \@outlinefile=\write4
 \openout4 = `one_day_at_a_time.out'.
-
-
-
-LaTeX Warning: Citation `Wong' on page 1 undefined on input line 171.
 
 
 Overfull \hbox (337.20168pt too wide) in paragraph at lines 175--176
@@ -742,30 +741,7 @@ Overfull \hbox (337.20168pt too wide) in paragraph at lines 175--176
 
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `Wong' on page 2 undefined on input line 182.
-
-
-LaTeX Warning: Citation `Schor' on page 2 undefined on input line 195.
-
-
-LaTeX Warning: Citation `Schor' on page 2 undefined on input line 195.
-
-
-
 [2]
-
-LaTeX Warning: Citation `RSA' on page 3 undefined on input line 197.
-
-
-LaTeX Warning: Citation `Algorithms' on page 3 undefined on input line 203.
-
-
-LaTeX Warning: Citation `Algorithms' on page 3 undefined on input line 205.
-
-
-LaTeX Warning: Citation `RSA' on page 3 undefined on input line 210.
-
-
 
 [3]
 
@@ -775,12 +751,10 @@ LaTeX Warning: Citation `DH' on page 4 undefined on input line 239.
 LaTeX Warning: Citation `DH' on page 4 undefined on input line 239.
 
 
-LaTeX Warning: Citation `TropCrypt' on page 4 undefined on input line 248.
 
-No file one_day_at_a_time.bbl.
+[4] (./one_day_at_a_time.bbl)
 
-
-[4] (./one_day_at_a_time.aux)
+[5] (./one_day_at_a_time.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -789,44 +763,38 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `one_day_at_a_time.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `one_day_at_a_time.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A0E375A2F8F64521589F48B3215580CC;985.
+Package rerunfilecheck Info: File `one_day_at_a_time.out' has not changed.
+(rerunfilecheck)             Checksum: 861EFBE1D087F6C5FD5A006DDCAE1C5D;1226.
  ) 
 Here is how much of TeX's memory you used:
- 22610 strings out of 473190
- 422177 string characters out of 5715801
- 811240 words of memory out of 5000000
- 45305 multiletter control sequences out of 15000+600000
- 565884 words of font info for 66 fonts, out of 8000000 for 9000
+ 22655 strings out of 473190
+ 422833 string characters out of 5715801
+ 811531 words of memory out of 5000000
+ 45329 multiletter control sequences out of 15000+600000
+ 566713 words of font info for 69 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  84i,6n,91p,1727b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on one_day_at_a_time.pdf (4 pages, 184694 bytes).
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2025/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on one_day_at_a_time.pdf (5 pages, 227128 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 32 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

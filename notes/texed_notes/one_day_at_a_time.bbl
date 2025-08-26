@@ -1,0 +1,38 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CLRS22}
+
+\bibitem[Bar16]{barak}
+Boaz Barak, \emph{Cs 127 / csci e-127: Cryptography (notes)},
+  \url{https://www.boazbarak.org/cs127spring16/}, 2016, Accessed: 2025.
+
+\bibitem[CLRS22]{Algorithms}
+Thomas~H. Cormen, Charles~Eric Leiserson, Ronald~L. Rivest, and Clifford Stein,
+  \emph{Introduction to algorithms / thomas h. cormen, charles e. leiserson,
+  ronald l. rivest, clifford stein.}, fourth edition. ed., The MIT Press,
+  Cambridge, Massachusetts, 2022 (eng).
+
+\bibitem[GS13]{TropCrypt}
+Dima Grigoriev and Vladimir Shpilrain, \emph{Tropical cryptography}, CoRR
+  \textbf{abs/1301.1195} (2013).
+
+\bibitem[RSA78]{RSA}
+R.~L. Rivest, A.~Shamir, and L.~Adleman, \emph{A method for obtaining digital
+  signatures and public-key cryptosystems}, Commun. ACM \textbf{21} (1978),
+  no.~2, 120–126.
+
+\bibitem[Sho97]{Schor}
+Peter~W. Shor, \emph{Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer}, SIAM Journal on Computing
+  \textbf{26} (1997), no.~5, 1484--1509.
+
+\bibitem[Won21]{Wong}
+David Wong, \emph{Real-world cryptography}, 1st ed., Manny, Shelter Island, NY,
+  2021.
+
+\end{thebibliography}
