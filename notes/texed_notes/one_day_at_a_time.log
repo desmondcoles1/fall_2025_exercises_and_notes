@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 SEP 2025 08:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 SEP 2025 08:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -752,11 +752,7 @@ LaTeX Warning: Citation `DH' on page 4 undefined on input line 239.
 
 
 
-[4]
-
-LaTeX Warning: Citation `Cryptanalysis' on page 5 undefined on input line 264.
-
-(./one_day_at_a_time.bbl)
+[4] (./one_day_at_a_time.bbl)
 
 [5] (./one_day_at_a_time.aux)
  ***********
@@ -767,16 +763,13 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `one_day_at_a_time.out' has not changed.
 (rerunfilecheck)             Checksum: AB7194DF9A9484D25FCB4D63A1D827C4;1542.
  ) 
 Here is how much of TeX's memory you used:
  22661 strings out of 473190
  422906 string characters out of 5715801
- 811532 words of memory out of 5000000
+ 811570 words of memory out of 5000000
  45332 multiletter control sequences out of 15000+600000
  566713 words of font info for 69 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -798,10 +791,10 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2025/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on one_day_at_a_time.pdf (5 pages, 230621 bytes).
+Output written on one_day_at_a_time.pdf (5 pages, 230677 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 214 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  44 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
