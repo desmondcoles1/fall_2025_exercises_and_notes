@@ -17,6 +17,11 @@ Thomas~H. Cormen, Charles~Eric Leiserson, Ronald~L. Rivest, and Clifford Stein,
   ronald l. rivest, clifford stein.}, fourth edition. ed., The MIT Press,
   Cambridge, Massachusetts, 2022 (eng).
 
+\bibitem[DH22]{Cryptanalysis}
+Whitfield Diffie and Martin~E. Hellman, \emph{Exhaustive cryptanalysis of the
+  nbs data encryption standard}, 1 ed., p.~391–414, Association for Computing
+  Machinery, New York, NY, USA, 2022.
+
 \bibitem[GS13]{TropCrypt}
 Dima Grigoriev and Vladimir Shpilrain, \emph{Tropical cryptography}, CoRR
   \textbf{abs/1301.1195} (2013).
