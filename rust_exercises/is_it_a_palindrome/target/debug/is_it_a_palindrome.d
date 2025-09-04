@@ -1,0 +1,1 @@
+/home/primaryuser/Documents/Programming/fall_2025_exercises_and_notes/rust_exercises/is_it_a_palindrome/target/debug/is_it_a_palindrome: /home/primaryuser/Documents/Programming/fall_2025_exercises_and_notes/rust_exercises/is_it_a_palindrome/src/main.rs

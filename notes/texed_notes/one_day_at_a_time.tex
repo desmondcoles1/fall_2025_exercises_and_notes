@@ -263,7 +263,8 @@ Today I'm gonna solve fizzbuzz in Rust. Remembering some \textit{really} basic t
 
 I read through \cite{Cryptanalysis}. For context this paper is written when good and fast cryptography is becoming a commercial need as a result of the digital age. In this paper Diffie and Hellman argue that the proposed standard from the National Bureau of Standards is insufficient. In particular they argue that the recommended length for encryption key is too short and is vulnerable to a known plain-text brute force attack. As in, an attacker that has some plaintext and the encrypted version of that text could reasonably find the key via brute force. The argument really is one about hardware limitations (or lack thereof). 
 
-
+\section{September 4th 2025}
+Wrote a little bit of Rust code that checks if a string is a palindrome. A couple important things I learned. First, if you want to import a module, which I did, you write "use". The "use" command defines your 'scope': there are modules, or collections of functions or commadnds and to use them you would need to specifcy the module, using "use" for a module or functionality means you don't need to specify that module every time. In my case I wanted to use "std::io" which gives tools for bringing in inputs and giving outputs. Second, you want to use "let" to define a variable. Rust demands that you define all your variables and their type explicitly. This allows rust to compile the code before running it, where a language like python compiles and runs code line by line.
 
 
 
