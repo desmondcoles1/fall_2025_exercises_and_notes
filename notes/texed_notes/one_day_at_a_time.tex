@@ -119,6 +119,8 @@ citecolor=orange!50!black, urlcolor=orange!50!black, pdfencoding=unicode]{hyperr
 
 
 
+\usepackage{hyperref}
+
 \title{One day at a time} 
 
 \date{}
@@ -265,6 +267,13 @@ I read through \cite{Cryptanalysis}. For context this paper is written when good
 
 \section{September 4th 2025}
 Wrote a little bit of Rust code that checks if a string is a palindrome. A couple important things I learned. First, if you want to import a module, which I did, you write "use". The "use" command defines your 'scope': there are modules, or collections of functions or commadnds and to use them you would need to specifcy the module, using "use" for a module or functionality means you don't need to specify that module every time. In my case I wanted to use "std::io" which gives tools for bringing in inputs and giving outputs. Second, you want to use "let" to define a variable. Rust demands that you define all your variables and their type explicitly. This allows rust to compile the code before running it, where a language like python compiles and runs code line by line.
+
+
+\section{September 9th 2025}
+
+I am going to try to play around with formal verification techniques in software. Kevin Buzzard is running a fairly large project to use Lean to formalize number theory results. I am going to focus on some applications to industry applications and things that may overlap with cryptography. For this reason I might try my hand at working with the Galois' tool SAW which can formally verify Rust programs. They have a tutorial \href{https://galoisinc.github.io/saw-script/master/rust-verification-with-saw/index.html}{here}. I may also this \href{https://www.coursera.org/learn/introduction-to-modeling-for-formal-verification}{coursera course}. I may also go through \href{https://leanprover-community.github.io/}{Kevin Buzzard's Lean website} as the Ethereum Foundation is currently running a \href{https://verified-zkevm.org/}{project to use formal verification for zkVMs}. It looks like if I want to contribute the most pressing thing would be to just learn Lean.
+
+So here is my rough understanding of how you check things about software in Lean. You need to define what you are interested in as mathematical objects and you need to specify their properties in Lean. You then phrase the relevant property of the program as a theorem, and then you write a proof of this theorem. You then write a proof and Lean checks this. One goofy exercise I could do is to formally verify my leetcode solutions, they are kind of well-adjusted for this. I could also \href{https://yaeldillies.github.io/Toric/?utm_source=chatgpt.com}{go back to my roots and contribute to this}. This is different from SAW which takes actual Rust code and checks that said Rust codes satisfies though specifications.
 
 
 
