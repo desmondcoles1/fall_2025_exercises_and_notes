@@ -119,8 +119,6 @@ citecolor=orange!50!black, urlcolor=orange!50!black, pdfencoding=unicode]{hyperr
 
 
 
-\usepackage{hyperref}
-
 \title{One day at a time} 
 
 \date{}
@@ -269,23 +267,11 @@ I read through \cite{Cryptanalysis}. For context this paper is written when good
 Wrote a little bit of Rust code that checks if a string is a palindrome. A couple important things I learned. First, if you want to import a module, which I did, you write "use". The "use" command defines your 'scope': there are modules, or collections of functions or commadnds and to use them you would need to specifcy the module, using "use" for a module or functionality means you don't need to specify that module every time. In my case I wanted to use "std::io" which gives tools for bringing in inputs and giving outputs. Second, you want to use "let" to define a variable. Rust demands that you define all your variables and their type explicitly. This allows rust to compile the code before running it, where a language like python compiles and runs code line by line.
 
 
-
 \section{September 7th 2025}
 
 Today I started reading this expository articel on zk-SNARKS \cite{SnarksExpository}. This paper is about \textbf{Zero-knowledge succinct non-interactive arguments of knowledge}. This is the notion of performing a proof that you performed a computation, in a manner that is zero-knowledge (you don't reveal information about the computation), non-interactive (you don't require back and forth communication between the prover and verifier), and the proof is succinct (the proof is quick even if the computation is large). More generally one might be interested in something called a zkVM, which is a ``zero-knowledge virtual machine''. a zkVM is a system that can execute zero-knowledge proofs that arbitrary programs are run. This kind of technology is really useful for things like the blockchain. The non-interactive proof component allows you to verify that a computation (that represents a transaction or contract) took place. Succinctness means that you can perform proofs of computations in a manner that is computationally cheaper and thus scalable. The zero-knowledge component is of course important for privacy. The idea of zk-SNARKS was originally introduced in \cite{BCCT}. I hope to revisit this with a more-detailed explanation, but here is a vague sketch of how the protocol works. First you have something that you want to prove you computed, represent this as a polynomial. You then make a proving key and verification key, which generally are tuples of points in a finite group or elliptic curve. You then encrypt the steps of the computation as elements of your group, and compute group elements that will satisfy some relations with the public verification key, these elements are the proof. The verifier then computes some relations which can only be satisfied if you computed ran the computation correctly. The zero-knowledge component is easy to program in, the succinctness is impressive though: even if the computation is very complex you can use a small number of relations to prove that you did it.
 
 As a note the idea that encryption of the form $x\mapsto g^x$ is \textit{homomorphic} is very important, we can add encrypted values by multiplying in the group. This observation is essential for this all to work
-
-
-
-\section{September 9th 2025}
-
-I am going to try to play around with formal verification techniques in software. Kevin Buzzard is running a fairly large project to use Lean to formalize number theory results. I am going to focus on some applications to industry applications and things that may overlap with cryptography. For this reason I might try my hand at working with the Galois' tool SAW which can formally verify Rust programs. They have a tutorial \href{https://galoisinc.github.io/saw-script/master/rust-verification-with-saw/index.html}{here}. I may also this \href{https://www.coursera.org/learn/introduction-to-modeling-for-formal-verification}{coursera course}. I may also go through \href{https://leanprover-community.github.io/}{Kevin Buzzard's Lean website} as the Ethereum Foundation is currently running a \href{https://verified-zkevm.org/}{project to use formal verification for zkVMs}. It looks like if I want to contribute the most pressing thing would be to just learn Lean.
-
-So here is my rough understanding of how you check things about software in Lean. You need to define what you are interested in as mathematical objects and you need to specify their properties in Lean. You then phrase the relevant property of the program as a theorem, and then you write a proof of this theorem. You then write a proof and Lean checks this. One goofy exercise I could do is to formally verify my leetcode solutions, they are kind of well-adjusted for this. I could also \href{https://yaeldillies.github.io/Toric/?utm_source=chatgpt.com}{go back to my roots and contribute to this}. This is different from SAW which takes actual Rust code and checks that said Rust codes satisfies though specifications. 
-
-I do like this little \href{https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/index2.html}{game} for Lean.
-
 
 
 \nocite{*}

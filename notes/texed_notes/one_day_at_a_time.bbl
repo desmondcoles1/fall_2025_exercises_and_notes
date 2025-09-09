@@ -5,17 +5,28 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{CLRS22}
+\begin{thebibliography}{BCCT12}
 
 \bibitem[Bar16]{barak}
 Boaz Barak, \emph{Cs 127 / csci e-127: Cryptography (notes)},
   \url{https://www.boazbarak.org/cs127spring16/}, 2016, Accessed: 2025.
+
+\bibitem[BCCT12]{BCCT}
+Nir Bitansky, Ran Canetti, Alessandro Chiesa, and Eran Tromer, \emph{From
+  extractable collision resistance to succinct non-interactive arguments of
+  knowledge, and back again}, Proceedings of the 3rd Innovations in Theoretical
+  Computer Science Conference (New York, NY, USA), ITCS '12, Association for
+  Computing Machinery, 2012, p.~326–349.
 
 \bibitem[CLRS22]{Algorithms}
 Thomas~H. Cormen, Charles~Eric Leiserson, Ronald~L. Rivest, and Clifford Stein,
   \emph{Introduction to algorithms / thomas h. cormen, charles e. leiserson,
   ronald l. rivest, clifford stein.}, fourth edition. ed., The MIT Press,
   Cambridge, Massachusetts, 2022 (eng).
+
+\bibitem[DH76]{DH}
+W.~Diffie and M.~Hellman, \emph{New directions in cryptography}, IEEE
+  Transactions on Information Theory \textbf{22} (1976), no.~6, 644--654.
 
 \bibitem[DH22]{Cryptanalysis}
 Whitfield Diffie and Martin~E. Hellman, \emph{Exhaustive cryptanalysis of the
@@ -25,6 +36,9 @@ Whitfield Diffie and Martin~E. Hellman, \emph{Exhaustive cryptanalysis of the
 \bibitem[GS13]{TropCrypt}
 Dima Grigoriev and Vladimir Shpilrain, \emph{Tropical cryptography}, CoRR
   \textbf{abs/1301.1195} (2013).
+
+\bibitem[Pet19]{SnarksExpository}
+Maksym Petkus, \emph{Why and how zk-snark works}, 2019.
 
 \bibitem[RSA78]{RSA}
 R.~L. Rivest, A.~Shamir, and L.~Adleman, \emph{A method for obtaining digital
