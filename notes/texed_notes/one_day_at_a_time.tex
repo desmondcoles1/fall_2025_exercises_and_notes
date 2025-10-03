@@ -290,6 +290,13 @@ I do like this little \href{https://www.ma.imperial.ac.uk/~buzzard/xena/natural_
 
 I am going to use the \href{https://openquantumsafe.org/about/}{Open Quantum Safe} library to make a little toy application to try out their \href{https://github.com/open-quantum-safe/liboqs}{ope-source library} for post-quantum secure cryptography.
 
+\section{October 3rd 2025}
+
+More or less got the script for the post-quantum secure encryption running! I I can symmetrically encrypt a file and then encrypt that file the Kyber512, encryption protocol, which relies on the problem of learning with errors over a module lattice. The biggest difficulty was getting the liboqs library to work properly on my computer, the next challenge will be to make this script run with a nicer user interface, I would like something similar to a PGP application, if possible.
+
+I have also started learning Lean, in particular I have proved some basic facts about matrices. A fun side-effect of this is that I thought harder than usual about some linear algebra problems. For example over a general commutative ring, having non-zero determinant implies full rank, but it does not imply invertibility. Conversely a matrix can be full rank but have zero determinant and not be invertible. Determinants still nicely correspond to invertibility over commutative rings,  a matrix is a unit iff the determinant is.
+
+
 
 \nocite{*}
 \bibliographystyle{amsalpha}
