@@ -296,7 +296,21 @@ More or less got the script for the post-quantum secure encryption running! I I 
 
 I have also started learning Lean, in particular I have proved some basic facts about matrices. A fun side-effect of this is that I thought harder than usual about some linear algebra problems. For example over a general commutative ring, having non-zero determinant implies full rank, but it does not imply invertibility. Conversely a matrix can be full rank but have zero determinant and not be invertible. Determinants still nicely correspond to invertibility over commutative rings,  a matrix is a unit iff the determinant is.
 
+\section{October 9th 2025}
 
+So lean is based on dependent type theory, which is a system for doing symbolic logic, where everything can be represented as a type. For example, the statement $P\rightarrow Q$ has the type of a function whose domain is proofs of $P$ and whose range is proofs of $Q$. The idea then is that proofs for a proposition $P$ are things of type $P$, and there are rules for how types can be formally manipulated, which is checked by the lean kernel, when we prove something we actually are constructing a proof object and lean is checking that we followed the rules. The theoretical underpinning of all this seems to be something called the Curry-Howard correspondence. There is a subtle idea about programs being the same thing as proofs.
+
+For example, consider this definition in lean:
+
+
+\begin{verbatim}
+def verified_sort (l : List bbN) :
+  Sigma r : List bbN, sorted r and r ~ l :=
+⟨merge_sort (· leq ·) l, ⟨merge_sort_sorted (· leq ·) l, merge_sort_perm (· leq ·) l⟩⟩
+\end{verbatim}
+
+
+What this gives is something called "verified sort" that is of type "a sorted list, with a proof that it is sorted, and a permutation that gives the sorting". This object is defined as a merge sorted list, the proof that merge sort works, and the resulting rearrangement from merge-sort. You could then evaluate this on a list to get the sorted list. We know the list will always be sorted because we know it is of that type, and if lean compiled are proof then it is correct. Wild stuff, simultaneously feels obvious that you can write formal logic for a computer to evaluate, but also feels shocking somehow. I learned this stuff from \href{https://lean-lang.org/theorem_proving_in_lean4/Propositions-and-Proofs/#propositions-and-proofs}{this lean manual}
 
 \nocite{*}
 \bibliographystyle{amsalpha}
