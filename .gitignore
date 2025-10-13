@@ -1,0 +1,2 @@
+# (Ignore any debug or release builds anywhere
+**/target/
