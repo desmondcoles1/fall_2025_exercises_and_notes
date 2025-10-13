@@ -312,6 +312,11 @@ def verified_sort (l : List bbN) :
 
 What this gives is something called "verified sort" that is of type "a sorted list, with a proof that it is sorted, and a permutation that gives the sorting". This object is defined as a merge sorted list, the proof that merge sort works, and the resulting rearrangement from merge-sort. You could then evaluate this on a list to get the sorted list. We know the list will always be sorted because we know it is of that type, and if lean compiled are proof then it is correct. Wild stuff, simultaneously feels obvious that you can write formal logic for a computer to evaluate, but also feels shocking somehow. I learned this stuff from \href{https://lean-lang.org/theorem_proving_in_lean4/Propositions-and-Proofs/#propositions-and-proofs}{this lean manual}
 
+\section{October 13th 2025}
+
+Went to a talk today from \href{https://www.galois.com/articles/automated-lean-proofs-for-every-type}{Elizaveta Pertseva} on using SMT solvers to prove theorems in lean. SMT solvers are programs that can check if a given formula (typically without quantifiers) can be satisfied. In this case the idea is that an SMT solver could be used to prove something in lean, in particular it could be used to construct a proof that some kind of software satisfies a certain property. One major goal for this project was to streamline the process of translating types in lean for the SMT solver, and creating an interface that does this but allows user input. The end output of this project was verification of the front of a zkVM called jolt. This work was done at Galois.
+
+
 \nocite{*}
 \bibliographystyle{amsalpha}
 \bibliography{one_day_at_a_time}{}
