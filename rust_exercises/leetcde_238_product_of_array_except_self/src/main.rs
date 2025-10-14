@@ -38,4 +38,21 @@ fn main() {
 }
 
 
-//this solution was slow
+//this solution was slow and uses division, here it is faster and without division
+
+pub fn product_except_self_better(nums: Vec<i32>) -> Vec<i32> {
+    //initiailizing variables
+    let num_nums = nums.len(); //length of relevant vectors
+    let mut product_except_self_vector: Vec<i32> = vec![1; num_nums];  //result 
+    let mut prefix = 1;
+    for i in 0..num_nums {
+        product_except_self_vector[i] = prefix;
+        prefix *= nums[i];
+    }
+    let mut suffix = 1;
+    for i in (0..num_nums).rev() {
+        product_except_self_vector[i] *= suffix;
+        suffix *= nums[i];
+    }
+    return product_except_self_vector
+}
