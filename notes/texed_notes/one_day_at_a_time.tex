@@ -316,6 +316,15 @@ What this gives is something called "verified sort" that is of type "a sorted li
 
 Went to a talk today from \href{https://www.galois.com/articles/automated-lean-proofs-for-every-type}{Elizaveta Pertseva} on using SMT solvers to prove theorems in lean. SMT solvers are programs that can check if a given formula (typically without quantifiers) can be satisfied. In this case the idea is that an SMT solver could be used to prove something in lean, in particular it could be used to construct a proof that some kind of software satisfies a certain property. One major goal for this project was to streamline the process of translating types in lean for the SMT solver, and creating an interface that does this but allows user input. The end output of this project was verification of the front of a zkVM called jolt. This work was done at Galois.
 
+\section{October 15th 2025}
+I have been working on contributing to the \href{https://verified-zkevm.org/}{zkEVM Formal Verification Project.} Generally this project aims to build more tools for formal verification and to integrate FV into maintenance of software projects. In general this goal wants to verify certain things about zkEVMs. I have been contributing to Arklib which is part of the cryptography track. This track aims to verify the security and implementation of cryptographic primitives used in zkEVMs. This project is primarily interested in RISC-V zkVMs. One difficulty with formal verification in lean is that you need to translate things from another language into lean, which could be time consuming. A tool called \href{https://github.com/cryspen/hax}{hax} is being developed to do this just this, to translate rust code into lean so it can be verified.
+
+Project idea: it would be cool to try to verify some code with hax.
+
+To reiterate, a virtual machine is software that effectively simulates a computer inside of your computer. A zkVM is something that runs a programs like a VM but it produces a zk-proof that it ran the specified program correctly and it also produces the output, this allows outside observers to verify things without revealing sensitive information, and it's computationally efficient when implemented correctly.
+
+To do: I need to underdtand RISC-V's contribution, what zk-circuits are, and why Rust is so central to this ecosystem.
+
 
 \nocite{*}
 \bibliographystyle{amsalpha}
