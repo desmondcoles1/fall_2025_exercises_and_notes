@@ -323,7 +323,24 @@ Project idea: it would be cool to try to verify some code with hax.
 
 To reiterate, a virtual machine is software that effectively simulates a computer inside of your computer. A zkVM is something that runs a programs like a VM but it produces a zk-proof that it ran the specified program correctly and it also produces the output, this allows outside observers to verify things without revealing sensitive information, and it's computationally efficient when implemented correctly.
 
-To do: I need to underdtand RISC-V's contribution, what zk-circuits are, and why Rust is so central to this ecosystem.
+To do: I need to understand RISC-V's contribution, what zk-circuits are, and why Rust is so central to this ecosystem.
+
+\section{October 16th 2025}
+I am reading a bit about lean to get a better understanding of how it works. 
+
+When you state a theorem or use the "have" command in a proof you introduce a goal. The goal will be constructing a proof term of the relevant type. A proof term is just an expression in lean. Tactics tell lean how to construct a proof term from other proof terms. When you prove a theorem P you demonstrate that a proof of type P exists. You then assemble proof terms together into other proof terms into a new proof term that has a different type. For example "intro" helps you assemble a proof term of type P implies Q. A "sorry" says "this proof type may be empty, but pretend like it is not and continue to assemble other proof terms that rely on proof terms of this type". The 'apply' tactic takes some other expression and unifies it with the current goal for example:
+\begin{verbatim}
+lemma conjcomm (P Q : Prop) : P and Q rightarrow Q and P := lambda h, <h.2, h.1>
+
+example (P Q : Prop) (h : P and Q) : Q and P :=
+begin
+  apply conjcomm,
+  exact h,
+end
+\end{verbatim}
+The 'rewrite' tactic changes specific terms in the goal by using theorems. I.e. things in an iff or on the other end of an equality will be swapped out. More generally, simp, will look throughout the goal and rewrite it using things in mathlib tagged as simp. Though, sometimes you have to tell simp where to look.
+
+
 
 
 \nocite{*}
