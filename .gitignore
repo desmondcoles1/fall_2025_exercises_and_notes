@@ -1,2 +1,12 @@
 # (Ignore any debug or release builds anywhere
 **/target/
+.DS_Store
+.DS_Store
+notes/.DS_Store
+notes/texed_notes/one_day_at_a_time.aux
+notes/texed_notes/one_day_at_a_time.log
+notes/texed_notes/one_day_at_a_time.out
+notes/texed_notes/one_day_at_a_time.synctex.gz
+rust_exercises/.DS_Store
+rust_exercises/leetcde_1071_gcd_strings/.DS_Store
+rust_exercises/.DS_Store
