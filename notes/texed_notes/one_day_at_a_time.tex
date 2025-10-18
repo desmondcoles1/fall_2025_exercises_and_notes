@@ -346,7 +346,11 @@ I have been reading a bit about zkML. The basic idea is that you want to do ML, 
 
 On the other hand, if you are really concerned about private data, you could perform fully homomorphic encryption on this data and then train a model on that encrypted data. This is difficult though because computing on encrypted data isn't necessarily easy, only algebraic operations can be used for activation functions, for example.
 
+\section{October 18th 2025}
 
+I was reading about zkML a bit more, and the main use case that I can think of is you have a situation where you have someone with a model, and you want to ensure people using the model that the model is not changing. So this involves building the model, committing to the model, running the model, and then providing proof that you ran the model you committed to and got output Y. There is a package for example, ezkl for doing this, there is also something called zkpytorch, or I could try to do ML in rust and then use RISCV but that may be hard as I may have to do a lot of manual input.
+
+If one is interested in doing ML where data is protected, it's probably better to do some kind of ML on encrypted data. Encrypting some data homomorphically and then doing some EDA on it could be interesting, how, for example should PCA work? Could one use an ML model built from polynomial functions very easily?
 
 
 \nocite{*}
