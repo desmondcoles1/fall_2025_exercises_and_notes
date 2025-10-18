@@ -22,6 +22,25 @@ pub fn increasing_triplet(nums: Vec<i32>) -> bool {
     return result
 }
 
+//this solution O(n^2), it is too slow, the following O(n) and works better
+
+pub fn increasing_triplet_better(nums: Vec<i32>) -> bool {
+    let mut first = i32::MAX;
+    let mut second = i32::MAX;
+
+    for &n in &nums {
+        if n <= first {
+            first = n;              // smallest so far
+        } else if n <= second {
+            second = n;             // second smallest so far
+        } else {
+            // found n > second > first
+            return true;
+        }
+    }
+    false
+}
+
 ///test
 
 fn main() {
