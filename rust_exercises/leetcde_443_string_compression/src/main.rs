@@ -8,15 +8,34 @@
 //You must write an algorithm that uses only constant extra space.
 
 pub fn compress(chars: &mut Vec<char>) -> i32 {
-    let mut s = String::new();
-
+    let mut v: Vec<char> = Vec::new();
+    v.push(chars[0])
+    let l = chars.len();
+    for i in 1..l {
+        if chars[i] = chars[i-1]{
+            if v.last() == 9 {
+                v.push(chars[i])
+            }
+            if (1..9).contains(&v.last().unwrap()) {
+                v.last() = v.last()+1
+            }
+            if if v.last() == chars[i] {
+                v.push(1)
+            }
+        }
+        else {
+            v.push()
+        }
     }
+    s.append(&mut v);
+    return s.len()
+}
 
 ///test
 
-fn main() {
-    let mut chars: &mut Vec<char> = ["a","a","b","b","c","c","c"].to_vec();
-    println!("{:?}", compress(chars))
-}
+//fn main() {
+//    let mut chars: &mut Vec<char> = ["a","a","b","b","c","c","c"].to_vec();
+//    println!("{:?}", compress(chars))
+//}
 
 
