@@ -340,6 +340,12 @@ end
 \end{verbatim}
 The 'rewrite' tactic changes specific terms in the goal by using theorems. I.e. things in an iff or on the other end of an equality will be swapped out. More generally, simp, will look throughout the goal and rewrite it using things in mathlib tagged as simp. Though, sometimes you have to tell simp where to look.
 
+\section{October 17th 2025}
+
+I have been reading a bit about zkML. The basic idea is that you want to do ML, and you want to prove to someone that you ran model A and got output Y but not reveal A or X. This allows someone to protect the model they built, and allows someone using the model to verify that a company isn't claiming to use model when running another (which they may do to reduce computational expenses). The workflow would basically be, commit to some weights, possibly via a hash, and then when you return an output of the model A you can run a zk-proof that you did in fact use A.
+
+On the other hand, if you are really concerned about private data, you could perform fully homomorphic encryption on this data and then train a model on that encrypted data. This is difficult though because computing on encrypted data isn't necessarily easy, only algebraic operations can be used for activation functions, for example.
+
 
 
 
