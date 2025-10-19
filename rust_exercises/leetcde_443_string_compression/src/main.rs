@@ -9,33 +9,43 @@
 
 pub fn compress(chars: &mut Vec<char>) -> i32 {
     let mut v: Vec<char> = Vec::new();
-    v.push(chars[0])
+    v.push(chars[0]);
     let l = chars.len();
     for i in 1..l {
-        if chars[i] = chars[i-1]{
-            if v.last() == 9 {
-                v.push(chars[i])
+        if chars[i] == chars[i-1]{
+            //blah, fixed this with copilot, still don't understand the borrowing issue
+            // check last element via a temporary copy to avoid holding an
+            // immutable borrow while we might mutate `v` below
+            if let Some(last) = v.last().copied() {
+                if last == '9' {
+                    v.push(chars[i]);
+                    continue;
+                }
+
+                if ('1'..='8').contains(&last) {
+                    // mutate the last element in place
+                    if let Some(last_mut) = v.last_mut() {
+                        let digit = last_mut.to_digit(10).unwrap() + 1;
+                        *last_mut = std::char::from_digit(digit, 10).unwrap();
+                    }
+                } else if last == chars[i] {
+                    v.push('1');
+                }
             }
-            if (1..9).contains(&v.last().unwrap()) {
-                v.last() = v.last()+1
-            }
-            if if v.last() == chars[i] {
-                v.push(1)
-            }
-        }
-        else {
-            v.push()
+        } else {
+            v.push(chars[i]);
         }
     }
-    s.append(&mut v);
-    return s.len()
+    chars.append(&mut v);
+    let s = chars.len() as i32;
+    return s
 }
 
 ///test
 
-//fn main() {
+fn main() {
 //    let mut chars: &mut Vec<char> = ["a","a","b","b","c","c","c"].to_vec();
 //    println!("{:?}", compress(chars))
-//}
+}
 
 
