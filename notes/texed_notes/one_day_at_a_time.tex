@@ -362,7 +362,10 @@ Mini-project idea: try to use hax, or SAW to to convert my leetcode problems int
 
 I have been spending quite a lot of time trying to prove inequalities in lean; calculations over the reals are difficult for me, need to pin down some ways to do this better.
 
+\section{October 22nd 2025}
 
+I have been reading a bit about the basics of bug testing in software. One on the hand there are relatively obvious paths to checking for bugs: including investigating user reports of bugs and simply reading error logs. One can also do "unit testing" i.e. testing code in very small chunks. One can also release beta versions or create a 'staging environment' to test code. There are also ways to catch bugs before they crop up. Continuous integration for example is where developers push to code to a min database often, multiple times a day, and automated tests are run or other formatting features like linters are used to make sure the code doesn't cause issues. Good documentation during this process makes it easier to isolate bugs and good testing prevents many bugs. There is also 'test-driven development' where you write tests for your code before you write the code itself, and then check that your code passes the test. One can also do static analysis, so analyzing the code without running it, or property-based testing, where a wide-range of inputs are tested.
+Formal verification fits into this picture by guaranteeing certain bugs don't happen, the drawback is that FV can be time consuming and really hard, so it's only worth doing if you have something really critical.
 
 \nocite{*}
 \bibliographystyle{amsalpha}
