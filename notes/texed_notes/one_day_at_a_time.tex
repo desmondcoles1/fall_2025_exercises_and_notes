@@ -379,6 +379,11 @@ I got hax to translate the kids with candies problem successfully. This requires
 
 Played around more with hax today. I translated a post-condition. It's pretty time-consuming to do some of this stuff even in trivial cases. Proving that algorithms work also doesn't feel like it's verifying much because my programs are so simple. It might be more interesting to check if two algorithms really always run the same. This would be an easy post-condition t state.
 
+\section{October 26th 2025}
+
+Why Rust for cryptography? According to this \href{https://www.cisa.gov/news-events/news/urgent-need-memory-safety-software-products}{CISA post} seventy percent of vulnerabilities are related to lack of memory safety. This includes things like using uninitialized memory or not respecting type-boundaries. The borrow checker in Rust keeps track of this and preemptively handles many of these issues. Though Python, Go, and Java have similar features to prevent things like this. C and C++ do not have these kinds of features and whoever writes the code has to manually manage the memory. Rust is different in this regard though because it does not use a garbage collector, which is part of the runtime system, which is code that the language uses to run. The issue is that this can slow down programs. Rust instead deals with memory at compile time: there are ownership rules that the compiler enforces at compile time, this is where the concepts of ownership, borrowing, and lifetime come in. Because of this Rust can run faster. Rust also allows for control at a level closer to C or C++. The result then is that for performance sensitive and security sensitive code Rust ends up being a good choice. The other thing is that many of the protocols people want to code are fairly new, so this opens the possibility to write in a new language, as developers are not relying on a large established codebase for this stuff.
+
+
 \nocite{*}
 \bibliographystyle{amsalpha}
 \bibliography{one_day_at_a_time}{}
