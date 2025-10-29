@@ -383,6 +383,39 @@ Played around more with hax today. I translated a post-condition. It's pretty ti
 
 Why Rust for cryptography? According to this \href{https://www.cisa.gov/news-events/news/urgent-need-memory-safety-software-products}{CISA post} seventy percent of vulnerabilities are related to lack of memory safety. This includes things like using uninitialized memory or not respecting type-boundaries. The borrow checker in Rust keeps track of this and preemptively handles many of these issues. Though Python, Go, and Java have similar features to prevent things like this. C and C++ do not have these kinds of features and whoever writes the code has to manually manage the memory. Rust is different in this regard though because it does not use a garbage collector, which is part of the runtime system, which is code that the language uses to run. The issue is that this can slow down programs. Rust instead deals with memory at compile time: there are ownership rules that the compiler enforces at compile time, this is where the concepts of ownership, borrowing, and lifetime come in. Because of this Rust can run faster. Rust also allows for control at a level closer to C or C++. The result then is that for performance sensitive and security sensitive code Rust ends up being a good choice. The other thing is that many of the protocols people want to code are fairly new, so this opens the possibility to write in a new language, as developers are not relying on a large established codebase for this stuff.
 
+\section{October 29th 2025}
+
+In this AWS article about how \href{https://aws.amazon.com/blogs/opensource/lean-into-verified-software-development/}{Cedar} was constructed (Cedar is a langauge for designing permissions for applications, developed by AWS) the authors discuss how they do `verification-guided development' with lean. The idea is that they construct a model of important components of the code in Lean, and then they use `differential random testing' to show that the models match the actual code. Differential random testing is where you generate many inputs randomly and run them through both models to see that they behave the same. In a sense, leetcode basically does this to check solutions. In principle a highly reliable translation tool (like hax) should be able to remove the need for this, but on some level your formal verification is only as good as your formal verification. Here is some lean code where they model the `authorizer' from Cedar:
+\begin{verbatim}
+def isAuthorized 
+  (req : Request) 
+  (entities : Entities) 
+  (policies : Policies) : Response 
+:=
+   let forbids := satisfiedPolicies .forbid policies req entities
+   let permits := satisfiedPolicies .permit policies req entities
+   if forbids.isEmpty && !permits.isEmpty
+   then { decision := .allow, policies := permits }
+   else { decision := .deny,  policies := forbids }
+   
+theorem forbid_trumps_permit 
+   (request : Request) (entities : Entities) (policies : Policies) :
+   (thereexists (policy : Policy),
+     policy in policies = and
+     policy.effect = forbid and
+     satisfied policy request entities) \rightarrow
+   (isAuthorized request entities policies).decision = deny
+ := by
+   intro h
+   unfold isAuthorized
+   simp [if_satisfied_then_satisfiedPolicies_non_empty 
+        forbid policies request entities h]
+\end{verbatim}
+There longest proof is around 4,500 lines and took 18 days to write!
+
+Part of what AWS likes about lean is the versatility and the speed at which it verifies things. Some other reasons people like lean are that it relies on a fairly small and well-understood kernel, so it is highly trusted. It also has a large ecosystem around it, and there is a clear directive by the lean community to make it more popular. The fact that lean can both be used for formal verification and as a programming language is also cited as a benefit. There are still people that prefer F*, Coq, or Isabelle. For example \href{Firefox' cryptography is formally verified with F*}{https://blog.mozilla.org/security/2020/07/06/performance-improvements-via-formally-verified-cryptography-in-firefox/}. In general though FV is generally seen as difficult to do in practice and the enthusiastic community around lean may be the reason for its success.
+
+
 
 \nocite{*}
 \bibliographystyle{amsalpha}
