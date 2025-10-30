@@ -415,6 +415,10 @@ There longest proof is around 4,500 lines and took 18 days to write!
 
 Part of what AWS likes about lean is the versatility and the speed at which it verifies things. Some other reasons people like lean are that it relies on a fairly small and well-understood kernel, so it is highly trusted. It also has a large ecosystem around it, and there is a clear directive by the lean community to make it more popular. The fact that lean can both be used for formal verification and as a programming language is also cited as a benefit. There are still people that prefer F*, Coq, or Isabelle. For example \href{Firefox' cryptography is formally verified with F*}{https://blog.mozilla.org/security/2020/07/06/performance-improvements-via-formally-verified-cryptography-in-firefox/}. In general though FV is generally seen as difficult to do in practice and the enthusiastic community around lean may be the reason for its success.
 
+\section{October 30th 2025}
+
+Now that I have managed to deal with the way rust returns an option, I think that formally verifying more code should be easy, as all proofs should boil down to proving that two pieces of code panic at the same time and that they return the same result when panicking.
+
 
 
 \nocite{*}
