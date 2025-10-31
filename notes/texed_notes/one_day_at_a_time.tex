@@ -419,6 +419,9 @@ Part of what AWS likes about lean is the versatility and the speed at which it v
 
 Now that I have managed to deal with the way rust returns an option, I think that formally verifying more code should be easy, as all proofs should boil down to proving that two pieces of code panic at the same time and that they return the same result when panicking.
 
+\section{October 31st 2025}
+
+I have been trying to verify something just a tiny bit more complicated, I have been trying to verify that two polynomial functions are the same. The issue I run into with this is that there are result operators nested all throughout the arithmetic operations, unfolding all of this becomes a mess.
 
 
 \nocite{*}
