@@ -423,6 +423,9 @@ Now that I have managed to deal with the way rust returns an option, I think tha
 
 I have been trying to verify something just a tiny bit more complicated, I have been trying to verify that two polynomial functions are the same. The issue I run into with this is that there are result operators nested all throughout the arithmetic operations, unfolding all of this becomes a mess.
 
+\section{November 5th 2025}
+I am revisitng the sorrys found in the JohnsonBound/Basic.lean file or arklib. My main issue is that I need to find the corresponding statements in Guruswami's "Algorithmic Results in List Decoding". I also added some assumptions to the theorem I proved the other week, but these may be superfluous. To prove that the weak Johnson bound implies the strong one, as in the second sorry, I think I just need to unpack the weak Johnson condition and combine it with sqrt le J.
+
 
 \nocite{*}
 \bibliographystyle{amsalpha}
