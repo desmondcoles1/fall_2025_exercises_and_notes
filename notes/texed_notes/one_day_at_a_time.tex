@@ -426,6 +426,10 @@ I have been trying to verify something just a tiny bit more complicated, I have 
 \section{November 5th 2025}
 I am revisitng the sorrys found in the JohnsonBound/Basic.lean file or arklib. My main issue is that I need to find the corresponding statements in Guruswami's "Algorithmic Results in List Decoding". I also added some assumptions to the theorem I proved the other week, but these may be superfluous. To prove that the weak Johnson bound implies the strong one, as in the second sorry, I think I just need to unpack the weak Johnson condition and combine it with sqrt le J.
 
+\section{November 10th 2025}
+
+Lately I have been reading a bit about Fully Homomorphic Encryption. The basic idea behind FHE is that you can encrypt data in a way that allows you to do run computations on the encrypted data. Essentially it is like public key cryptography but the encryption and decryption functions are homomorphisms between the regular data and the encrypted data. This already happens when you encrypt data with the discreet log problem, but it only preserves addition (because $e^x\cdot e^y=e^{x+y}$). According this article \cite{eprint2025_1775} one the more popular frameworks for this is "ring learning with errors". This framework is post-quantum resistant and allows for multiplication and addition to be done on encrypted data. The issue nowadays is how this is made feasible, as FHE encryption is computationally demanding, the article cited above proposes a protocol called HELIOS for FHE on cloud services. One application of such a thing would be ML that respects privacy. User data can be learned and predicted on but only the user can access the results. This would be good for example for using a large AI model with data you don't want to share with the company that owns it, like sensitive health or legal data.
+
 
 \nocite{*}
 \bibliographystyle{amsalpha}
